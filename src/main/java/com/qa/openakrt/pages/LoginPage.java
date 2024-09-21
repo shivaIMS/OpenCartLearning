@@ -1,5 +1,6 @@
 package com.qa.openakrt.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.qa.openkart.utils.ElementUtil;
@@ -20,22 +21,26 @@ public class LoginPage {
 	private By forgotPwdLink = By.xpath("//div[@class='form-group']//a[normalize-space()='Forgotten Password']");
 	private By registerLink = By.linkText("Register");
 
+	@Step("getLoginTitleTest method")
 	public String getLoginTitleTest() {
 		String title = eleUtil.waitForTitleIs("Account Login", TimeUtil.DEFAULT_MEDIUM_TIME);
 		System.out.println("Login Page title is : " + title);
 		return title;
 	}
 
+	@Step("getLoginCurrentURL")
 	public String getLoginCurrentURL() {
 		String url = eleUtil.waitForURLContains("route=account/account", TimeUtil.DEFAULT_MEDIUM_TIME);
 		System.out.println("Login Page currentURL is : " + url);
 		return url;
 	}
 
+	@Step("isForgtPwdLinkExist")
 	public boolean isForgtPwdLinkExist() {
 		return eleUtil.isElementDisplayed(forgotPwdLink);
 	}
 
+	@Step("doLogin with username {0} and password {1}")
 	public AccountPage doLogin(String username, String password) {
 		System.out.println("User creds are : " + username + " : " + password);
 
@@ -45,6 +50,7 @@ public class LoginPage {
 		return new AccountPage(driver);
 	}
 
+	@Step("navigateToRegistrationPage")
 	public RegistrationPage navigateToRegistrationPage() {
 		eleUtil.waitForElementVisible(registerLink, TimeUtil.DEFAULT_LONG_TIME);
 		eleUtil.doClick(registerLink);

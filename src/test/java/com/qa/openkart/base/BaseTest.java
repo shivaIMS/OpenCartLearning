@@ -3,6 +3,7 @@ package com.qa.openkart.base;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -30,6 +31,7 @@ public class BaseTest {
 	protected SoftAssert softAssert;
 	protected RegistrationPage registrationPage;
 
+	@Description("setup test...!!!")
 	@Parameters({"browser"})
 	@BeforeTest
 	public void setup(String browserName) {
@@ -50,6 +52,7 @@ public class BaseTest {
 		softAssert = new SoftAssert();
 	}
 
+	@Description("AfterTest - Logged out...!!!")
 	@AfterTest
 	public void tearDown() {
 		driver.quit();

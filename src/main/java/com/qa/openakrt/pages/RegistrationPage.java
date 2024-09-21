@@ -1,5 +1,6 @@
 package com.qa.openakrt.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -34,7 +35,7 @@ public class RegistrationPage {
 		this.driver = driver;
 		eleUtil = new ElementUtil(driver);
 	}
-	
+	@Step("Entering the data for userRegister with {0}, {1}, {2}, {3}, {4}, {5} and {6}")
 	public boolean userRegister(String firstName, String lastName, String email, String telephone, String password, String subscribe) {
 		
 		eleUtil.waitForElementVisible(this.firstName, 10).sendKeys(firstName);

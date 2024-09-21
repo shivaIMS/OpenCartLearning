@@ -1,5 +1,6 @@
 package com.qa.openkart.tests;
 
+import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -32,15 +33,17 @@ public class RegPageTest extends BaseTest {
 	public Object[][] getDataFromTheExcel() {
 		return ExcelUtil.getExcelTestData(AppCostants.REGISTER_SHEET_NAME);
 	}
-	
-	@Test(dataProvider = "getDataFromTheExcel")
-	public void userRegistrationPage(String fname, String lname,String telephone, String password, String subscribe) {
-		Assert.assertTrue(registrationPage.userRegister(fname, lname,StringUtils.randEMailID() ,telephone,password, subscribe));
-	}
-	
-//	@Test(dataProvider = "registrationDataProvider")
+
+
+//	@Test(dataProvider = "getDataFromTheExcel")
 //	public void userRegistrationPage(String fname, String lname,String telephone, String password, String subscribe) {
 //		Assert.assertTrue(registrationPage.userRegister(fname, lname,StringUtils.randEMailID() ,telephone,password, subscribe));
 //	}
+
+	@Step("userRegistrationPage")
+	@Test(dataProvider = "registrationDataProvider")
+	public void userRegistrationPage(String fname, String lname,String telephone, String password, String subscribe) {
+		Assert.assertTrue(registrationPage.userRegister(fname, lname,StringUtils.randEMailID() ,telephone,password, subscribe));
+	}
 
 }
