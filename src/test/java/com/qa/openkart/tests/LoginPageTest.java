@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseTest {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority = 1)
 	public void loginPageTitleTest() {
-		Log.info("Inside loginPageTitleTest....");
+		Log.info("=============== Inside loginPageTitleTest ===============");
 		String loginTitle = loginPage.getLoginTitleTest();
 		Assert.assertEquals(loginTitle, AppCostants.LOGIN_PAGE_TILE, AppError.TTITLE_NOT_FOUND);
 	}
