@@ -81,19 +81,24 @@ public class DriverFactory {
 				ip = new FileInputStream("./src/test/resources/config/config.qa.properties");
 			} else {
 				switch (envName.toLowerCase().trim()) {
-				case "qa":
+					case "qa":
+						System.out.println("Running on QA env" + envName);
 					ip = new FileInputStream("./src/test/resources/config/config.qa.properties");
 					break;
 				case "dev":
+					System.out.println("Running on DEV env" + envName);
 					ip = new FileInputStream("./src/test/resources/config/config.dev.properties");
 					break;
 				case "stage":
+					System.out.println("Running on STAGE env" + envName);
 					ip = new FileInputStream("./src/test/resources/config/config.stage.properties");
 					break;
 				case "uat":
+					System.out.println("Running on UAT env" + envName);
 					ip = new FileInputStream("./src/test/resources/config/config.uat.properties");
 					break;
 				case "prod":
+					System.out.println("Running on PROD env" + envName);
 					ip = new FileInputStream("./src/test/resources/config/config.properties");
 					break;
 
