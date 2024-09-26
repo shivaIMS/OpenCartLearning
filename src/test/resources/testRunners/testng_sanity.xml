@@ -16,7 +16,7 @@
     <test
             name="Accounts Page Test">
         <parameter name="browser"
-                   value="chrome"></parameter>
+                   value="firefox"></parameter>
         <classes>
             <class
                     name="com.qa.openkart.tests.AccountPageTest"></class>
