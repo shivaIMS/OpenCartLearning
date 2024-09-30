@@ -47,7 +47,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/shivaIMS/OpenCartLearning.git'
-                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testRunners/testng_sanity.xml"
+                    bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testRunners/testng_regression.xml -Denv=stage"
 
                 }
             }
