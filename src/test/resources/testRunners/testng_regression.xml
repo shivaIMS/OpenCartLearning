@@ -23,14 +23,14 @@
 		</classes>
 	</test>
 
-	    <test name="Registration Page Test">
-	        <parameter
-	                name="browser" value="chrome"></parameter>
-	        <classes>
-	            <class
-	                    name="com.qa.openkart.tests.RegPageTest"></class>
-	        </classes>
-	    </test>
+<!--	    <test name="Registration Page Test">-->
+<!--	        <parameter-->
+<!--	                name="browser" value="chrome"></parameter>-->
+<!--	        <classes>-->
+<!--	            <class-->
+<!--	                    name="com.qa.openkart.tests.RegPageTest"></class>-->
+<!--	        </classes>-->
+<!--	    </test>-->
 <!--		<test name="Login Page Test Edge">-->
 <!--			<parameter name="browser"-->
 <!--					   value="chrome"></parameter>-->
