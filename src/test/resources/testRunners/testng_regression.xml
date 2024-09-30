@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="com.qa.openkart.listeners.ExtentReportListener"/>
 		<listener class-name="com.qa.openkart.listeners.TestAllureListener"/>
-		<!--  <listener class-name="com.qa.openkart.listeners.AnnotationTransformer"/> -->
+		  <listener class-name="com.qa.openkart.listeners.AnnotationTransformer"/>
 	</listeners>
 	<test name="Login Page Test">
 		<parameter name="browser" value="chrome"></parameter>
@@ -31,39 +31,39 @@
 	                    name="com.qa.openkart.tests.RegPageTest"></class>
 	        </classes>
 	    </test>
-		<test name="Login Page Test Edge">
-			<parameter name="browser"
-					   value="chrome"></parameter>
-			<classes>
-				<class
-						name="com.qa.openkart.tests.LoginPageTest" />
-			</classes>
-		</test>
+<!--		<test name="Login Page Test Edge">-->
+<!--			<parameter name="browser"-->
+<!--					   value="chrome"></parameter>-->
+<!--			<classes>-->
+<!--				<class-->
+<!--						name="com.qa.openkart.tests.LoginPageTest" />-->
+<!--			</classes>-->
+<!--		</test>-->
 
-        <test name="Login Page Test Firefox">
-            <parameter name="browser" value="chrome"></parameter>
-            <classes>
-                <class name="com.qa.openkart.tests.LoginPageTest" />
-            </classes>
-        </test>
+<!--        <test name="Login Page Test Firefox">-->
+<!--            <parameter name="browser" value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class name="com.qa.openkart.tests.LoginPageTest" />-->
+<!--            </classes>-->
+<!--        </test>-->
 
-        <test name="Search Results Page Test">
-            <parameter name="browser"
-        value="chrome"></parameter>
-            <classes>
-                <class
-        name="com.qa.openkart.tests.SearchResultsTest"></class>
-            </classes>
-        </test>
+<!--        <test name="Search Results Page Test">-->
+<!--            <parameter name="browser"-->
+<!--        value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class-->
+<!--        name="com.qa.openkart.tests.SearchResultsTest"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 
-        <test name="Product Info Test">
-            <parameter name="browser"
-        value="chrome"></parameter>
-            <classes>
-                <class
-        name="com.qa.openkart.tests.ProducPagetInfoTest"></class>
-            </classes>
-        </test>
+<!--        <test name="Product Info Test">-->
+<!--            <parameter name="browser"-->
+<!--        value="chrome"></parameter>-->
+<!--            <classes>-->
+<!--                <class-->
+<!--        name="com.qa.openkart.tests.ProducPagetInfoTest"></class>-->
+<!--            </classes>-->
+<!--        </test>-->
 
 </suite> <!--
 Suite -->

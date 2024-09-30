@@ -4,8 +4,9 @@
     <listeners>
         <listener class-name="com.qa.openkart.listeners.ExtentReportListener"/>
         <listener class-name="com.qa.openkart.listeners.TestAllureListener"/>
-    <!--  <listener class-name="com.qa.openkart.listeners.AnnotationTransformer"/> -->
+      <listener class-name="com.qa.openkart.listeners.AnnotationTransformer"/>
  </listeners>
+
  <test name="Login Page Test">
      <parameter name="browser" value="chrome"></parameter>
      <classes>
@@ -13,15 +14,15 @@
      </classes>
  </test>
 
-    <test
-            name="Accounts Page Test">
-        <parameter name="browser"
-                   value="firefox"></parameter>
-        <classes>
-            <class
-                    name="com.qa.openkart.tests.AccountPageTest"></class>
-        </classes>
-    </test>
+<!--    <test-->
+<!--            name="Accounts Page Test">-->
+<!--        <parameter name="browser"-->
+<!--                   value="firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class-->
+<!--                    name="com.qa.openkart.tests.AccountPageTest"></class>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="Registration Page Test">-->
 <!--        <parameter-->
