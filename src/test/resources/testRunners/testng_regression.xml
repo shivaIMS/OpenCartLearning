@@ -1,23 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<!-- <suite name="Suite" verbose="3" thread-count="3" parallel="tests">-->
-<suite name="Smoke Test Suite" verbose="5">
-	<test name="Google Test">
-		<parameter name="url" value="https://www.google.com"></parameter>
+<suite name="Smoke Test" verbose="3" thread-count="2" parallel="tests">
+	<listeners>
+		<listener class-name="com.qa.openkart.listeners.ExtentReportListener"/>
+		<listener class-name="com.qa.openkart.listeners.TestAllureListener"/>
+		<!--  <listener class-name="com.qa.openkart.listeners.AnnotationTransformer"/> -->
+	</listeners>
+	<test name="Login Page Test">
 		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="headless" value="false"></parameter>
 		<classes>
-			<class name="testClasses.GoogleTest" />
+			<class name="com.qa.openkart.tests.LoginPageTest"/>
 		</classes>
 	</test>
-	<test name="OpenKart Test">
-		<parameter name="url"
-			value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"></parameter>
-		<parameter name="browser" value="firefox"></parameter>
-		<parameter name="headless" value="false"></parameter>
+
+	<test
+			name="Accounts Page Test">
+		<parameter name="browser"
+				   value="firefox"></parameter>
 		<classes>
-			<class name="testClasses.OpenKartTest"></class>
+			<class
+					name="com.qa.openkart.tests.AccountPageTest"></class>
 		</classes>
 	</test>
+
+	    <test name="Registration Page Test">
+	        <parameter
+	                name="browser" value="edge"></parameter>
+	        <classes>
+	            <class
+	                    name="com.qa.openkart.tests.RegPageTest"></class>
+	        </classes>
+	    </test>
+		<test name="Login Page Test Edge">
+			<parameter name="browser"
+					   value="edge"></parameter>
+			<classes>
+				<class
+						name="com.qa.openkart.tests.LoginPageTest" />
+			</classes>
+		</test>
+
+        <test name="Login Page Test Firefox">
+            <parameter name="browser" value="chrome"></parameter>
+            <classes>
+                <class name="com.qa.openkart.tests.LoginPageTest" />
+            </classes>
+        </test>
+
+        <test name="Search Results Page Test">
+            <parameter name="browser"
+        value="firefox"></parameter>
+            <classes>
+                <class
+        name="com.qa.openkart.tests.SearchResultsTest"></class>
+            </classes>
+        </test>
+
+        <test name="Product Info Test">
+            <parameter name="browser"
+        value="firefox"></parameter>
+            <classes>
+                <class
+        name="com.qa.openkart.tests.ProducPagetInfoTest"></class>
+            </classes>
+        </test>
+
 </suite> <!--
 Suite -->
